@@ -1,3 +1,4 @@
+export * from "./carrinho";
 export * from "./constants";
 export * from "./parcelamento";
 export * from "./pedido";

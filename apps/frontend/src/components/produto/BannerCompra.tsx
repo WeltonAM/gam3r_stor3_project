@@ -1,7 +1,8 @@
 'use client'
+
 import { IconCreditCard, IconShoppingCart } from '@tabler/icons-react'
 import { Moeda, Produto } from '@gstore/core'
-// import useCarrinho from '@/data/hooks/useCarrinho'
+import useCarrinho from '@/data/hooks/useCarrinho'
 import { useRouter } from 'next/navigation'
 import useParcelamento from '@/data/hooks/useParcelamento'
 
@@ -12,18 +13,18 @@ export interface BannerCompraProps {
 export default function BannerCompra(props: BannerCompraProps) {
     const router = useRouter()
     const { produto } = props
-    // const { adicionarItem } = useCarrinho()
+    const { adicionarItem } = useCarrinho()
     const parcelamento = useParcelamento(produto.precoPromocional)
 
     return (
         <div className="flex">
             <div className="flex flex-col border-r border-zinc-500 pr-5">
-                <div className="line-through text-zinc-400">de R$ {produto?.precoBase}</div>
+                <div className="line-through text-zinc-400">de {Moeda.formatar(produto?.precoBase)}</div>
 
                 <div className="text-2xl font-semibold">
                     <span className="text-base text-zinc-300">por</span>{' '}
 
-                    <span className="text-emerald-500">R$ {produto?.precoPromocional}</span>{' '}
+                    <span className="text-emerald-500">{Moeda.formatar(produto?.precoPromocional)}</span>{' '}
 
                     <span className="text-base text-zinc-300">à vista</span>
                 </div>
@@ -38,8 +39,7 @@ export default function BannerCompra(props: BannerCompraProps) {
             <div className="flex gap-2 items-center">
                 <button
                     className="flex-1 button bg-pink-600"
-                    onClick={() => { }}
-                // onClick={() => adicionarItem(produto)}
+                    onClick={() => adicionarItem(produto)}
                 >
                     <IconShoppingCart size={20} />
 
@@ -49,7 +49,7 @@ export default function BannerCompra(props: BannerCompraProps) {
                 <button
                     className="flex-1 button bg-violet-700"
                     onClick={() => {
-                        // adicionarItem(produto)
+                        adicionarItem(produto)
                         router.push('/checkout/pagamento')
                     }}
                 >

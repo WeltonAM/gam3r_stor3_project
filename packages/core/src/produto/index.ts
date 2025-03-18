@@ -1,5 +1,7 @@
-import Produto from "./Produto";
-import Precificavel from "./Precificavel";
 import Especificacoes from "./Especificacoes";
+import FiltrarProdutos from "./FiltrarProdutos";
+import Precificavel from "./Precificavel";
+import Produto from "./Produto";
 
-export type { Produto, Precificavel, Especificacoes };
+export { FiltrarProdutos };
+export type { Especificacoes, Precificavel, Produto };

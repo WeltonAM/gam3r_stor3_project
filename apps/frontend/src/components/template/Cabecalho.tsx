@@ -1,11 +1,12 @@
+'use client'
+
 import Logo from '../shared/Logo'
 import IconeCarrinho from '../shared/IconeCarrinho'
 import Link from 'next/link'
-// import useCarrinho from '@/data/hooks/useCarrinho'
+import useCarrinho from '@/data/hooks/useCarrinho'
 
 export default function Cabecalho() {
-    const qtdeItens = 0
-    // const { qtdeItens } = useCarrinho()
+    const { qtdeItens } = useCarrinho()
 
     return (
         <div
@@ -23,7 +24,7 @@ export default function Cabecalho() {
                     </Link>
                 </div>
             </div>
-            
+
             <div className="h-px bg-gradient-to-r from-violet-600/20 via-violet-600/80 to-violet-600/20"></div>
         </div>
     )
