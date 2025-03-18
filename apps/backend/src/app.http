@@ -1,0 +1,2 @@
+### GET teste 
+GET http://localhost:4000/ping

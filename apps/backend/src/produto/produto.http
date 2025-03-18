@@ -1,0 +1,37 @@
+### GET produtos
+GET http://localhost:4000/produto
+Accept: application/json
+
+### GET produto
+GET http://localhost:4000/produto/20
+Accept: application/json
+
+### POST produto
+POST http://localhost:4000/produto/salvar
+Content-Type: application/json
+
+{
+  "nome": "PRODUTO DE TESTE",
+  "descricao": "Descrição do produto de teste",
+  "marca": "Marca do produto de teste",
+  "modelo": "Modelo do produto de teste",
+  "imagem": "https://firebasestorage.googleapis.com/v0/b/formacao-dev.appspot.com/o/lancamentos%2Fgam3rstore%2Famazon-prime-video-game-console-ps5-slim.png?alt=media&token=d8a4f3b8-c9b0-4e9f-b1c1-f1f2f8f9e1d6",
+  "nota": 4.5,
+  "videoReview": "https://www.youtube.com/embed/bMFC-TM-t5E",
+  "tags": ["Nova Geração", "Ray Tracing", "Exclusivos"],
+  "precoBase": 3999.99,
+  "precoPromocional": 3499.99,
+  "menorPreco": 2999.99,
+  "maiorPreco": 5999.99,
+  "precoMedio": 3899.99,
+  "especificacoes": {
+    "destaque": "SSD Customizado",
+    "CPU": "AMD Ryzen Zen 2 8 núcleos",
+    "Armazenamento": "1TB SSD",
+    "peso": "4.05 kg"
+  }
+}
+
+### DELETE produto
+DELETE http://localhost:4000/produto/29
+Accept: application/json
