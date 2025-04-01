@@ -44,7 +44,7 @@ Gam3r Store é uma plataforma de e-commerce especializada em tecnologia, oferece
 2. Acesse o diretório do projeto:
 
    ```sh
-   cd gam3r-store
+   cd gam3r_stor3_project
    ```
 
 3. Instale as dependências com o comando a seguir na pasta raiz do projeto:
