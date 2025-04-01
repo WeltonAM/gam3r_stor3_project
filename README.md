@@ -38,7 +38,7 @@ Gam3r Store é uma plataforma de e-commerce especializada em tecnologia, oferece
 1. Clone este repositório:
 
    ```sh
-   git clone https://github.com/portfolio-projetos-dev/gam3r-store.git
+   git clone https://github.com/WeltonAM/gam3r_stor3_project
    ```
 
 2. Acesse o diretório do projeto:
